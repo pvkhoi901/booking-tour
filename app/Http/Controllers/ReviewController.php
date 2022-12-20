@@ -45,4 +45,17 @@ class ReviewController extends Controller
 
         return redirect()->route('reviews.index')->with($notify);
     }
+
+    public function destroy($id)
+    {
+        $result = $this->reviewService->delete($id);
+
+        $messages = [
+            'success' => 'Xóa thành công',
+            'error' => 'Xóa thất bại'
+        ];
+        $notify = $this->notify($result, $messages);
+
+        return redirect()->route('reviews.index')->with($notify);
+    }
 }
