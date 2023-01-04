@@ -177,6 +177,7 @@
                     <div class="team_members_slider">
                         <div class="owl-carousel owl-theme">
                             @foreach($reviews as $review)
+                                @if($review->is_show == 1)
                                 <div class="item">
                                     <div class="team_slider_wrapper">
                                         <div class="team_members_slider_image">
@@ -189,6 +190,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>

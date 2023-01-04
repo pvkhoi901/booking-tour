@@ -53,6 +53,11 @@
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             <i class="fa fa-sign-in"></i> Đăng ký/ Đăng nhập
                                         </a>
+                                        @if(Session::has('notify'))
+                                            <div class="alert alert-danger" style="margin-top: 10px; margin-bottom: -10px">
+                                                {{ Session::get('notify')}}
+                                            </div>
+                                        @endif
                                         <form action="{{ route('client_post_login') }}" method="post" id="login-form">
                                             @csrf
                                             <ul class="dropdown-menu">
@@ -78,7 +83,7 @@
                                                     </div>
                                                     <div class="sign_up_message">
                                                         <p>Chưa có tài khoản ? <a href="/register"> Đăng ký </a> </p>
-                                                        <p> <a href="" class="forget-passưord">Quên mật khẩu</a></p>
+                                                        <p> <a href="forgot-password" class="forget-password">Quên mật khẩu</a></p>
                                                     </div>
                                                 </li>
                                             </ul>

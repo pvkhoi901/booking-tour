@@ -93,4 +93,20 @@ class LoginController extends Controller
             }
         }
     }
+
+    public function getForgotPasswordClient()
+    {
+        return view('client.forgot_password');
+    }
+
+    public function postForgotPasswordClient(ForgotPasswordRequest $request)
+    {
+        $dataMail = [
+            'email' => $request->email,
+            'reset_password_link' => URL::temporarySignedRoute('get_reset_password', now()->addMinutes(30), ['email' => $request->email])
+        ];
+        Mail::to($request->email)->send(new ForgotPasswordMail($dataMail));
+
+        return redirect('/forgot-password')->with('notify', 'Vui lòng truy cập link reset mật khẩu trong mail');
+    }
 }

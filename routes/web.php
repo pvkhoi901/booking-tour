@@ -42,6 +42,11 @@ Route::post('/admin/forgot-password', [LoginController::class, 'postForgotPasswo
 Route::get('/admin/reset-password', [LoginController::class, 'getResetPassword'])->name('get_reset_password');
 Route::post('/admin/reset-password/{email}', [LoginController::class, 'postResetPassword'])->name('post_reset_password');
 
+Route::get('/forgot-password', [LoginController::class, 'getForgotPasswordClient'])->name('get_forgot_password');
+Route::post('/forgot-password', [LoginController::class, 'postForgotPasswordClient'])->name('post_forgot_password');
+Route::get('/reset-password', [LoginController::class, 'getResetPassword'])->name('get_reset_password');
+Route::post('/reset-password/{email}', [LoginController::class, 'postResetPassword'])->name('post_reset_password');
+
 Route::get('/', [HomeController::class, 'index'])->name('client.index');
 Route::get('/tours', [HomeController::class, 'tourList'])->name('client.tours.list');
 Route::get('/tours/{id}', [HomeController::class, 'tourDetail'])->name('client.tours.detail');
