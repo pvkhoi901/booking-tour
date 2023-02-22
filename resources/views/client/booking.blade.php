@@ -288,6 +288,7 @@
     <!-- blog js -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
+
     <script src="{{ asset('assets/client/js/blog.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
     </script>
@@ -357,11 +358,11 @@
             calculateWholePrice()
             $("#my_date_picker").datepicker({
                 dateFormat: 'dd/mm/yy',
-                beforeShowDay: function(date) {
-                    var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
+                // beforeShowDay: function(date) {
+                //     let string = jQuery.datepicker.formatDate('dd/mm/yy', date);
 
-                    return [validDepartureDateArray.indexOf(string) != -1]
-                }
+                //     return [validDepartureDateArray.indexOf(string) != -1]
+                // }
             })
 
             $('.price-person').change(function() {
@@ -494,6 +495,7 @@
             })
 
             $('#booking-btn').click(function() {
+                console.log(1);
                 $('#booking-form').submit()
             })
         })

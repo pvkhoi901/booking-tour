@@ -180,7 +180,7 @@ class HomeController extends Controller
                 'discount_rate' => $discount->discount_rate
             ]);
         }
-        
+
         return response()->json(['status' => false]);
     }
 
@@ -221,7 +221,7 @@ class HomeController extends Controller
             ]);
 
             return view('client.complete_booking', compact('email', 'paymentMethod'));
-        } 
+        }
         elseif(isset($request->vnp_TransactionStatus) && $request->vnp_TransactionStatus == '00') { // vnpay
             $vnpayBookingData = Session::get('vnpayBookingData');
             $vnpayBookingData['payment_status'] = 3;
@@ -250,7 +250,7 @@ class HomeController extends Controller
             $paymentMethod = 'Paypal';
             $email = $request->booking_person_email;
             $email = $request->booking_person_email;
-            
+
             Mail::to($email)->send(new BookingInformation($bookingData));
 
             Transition::create([
@@ -286,8 +286,8 @@ class HomeController extends Controller
     {
         $request['is_raw'] = 'is_raw';
 
-        $redirectRoute = "http://localhost:8000/complete-booking" . "?" . http_build_query($request->all());
-        
+        $redirectRoute = "http://localhost/complete-booking" . "?" . http_build_query($request->all());
+
         return redirect($redirectRoute);
     }
 
@@ -356,7 +356,7 @@ class HomeController extends Controller
         $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
         $vnp_Returnurl = "http://localhost:8000/complete-booking";
 
-        $vnp_TmnCode = "LADRSDF4";//Mã website tại VNPAY 
+        $vnp_TmnCode = "LADRSDF4";//Mã website tại VNPAY
         $vnp_HashSecret = "YUTMYRBDOBVYLPOEIUNXDZHZYJROZMGG"; //Chuỗi bí mật
 
         $vnp_TxnRef = time() .""; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
@@ -367,7 +367,7 @@ class HomeController extends Controller
         $vnp_BankCode = 'NCB';
         $vnp_IpAddr = $_SERVER['REMOTE_ADDR'];
         //Add Params of 2.0.1 Version
-    
+
 
         $inputData = array(
             "vnp_Version" => "2.1.0",
@@ -409,7 +409,7 @@ class HomeController extends Controller
         $vnp_Url = $vnp_Url . "?" . $query;
 
         if (isset($vnp_HashSecret)) {
-            $vnpSecureHash =   hash_hmac('sha512', $hashdata, $vnp_HashSecret);//  
+            $vnpSecureHash =   hash_hmac('sha512', $hashdata, $vnp_HashSecret);//
             $vnp_Url .= 'vnp_SecureHash=' . $vnpSecureHash;
         }
         $returnData = array('code' => '00'
@@ -458,7 +458,7 @@ class HomeController extends Controller
         $babySlot = $sameBooking->sum('baby_number');
         $placedSlot = $adultSlot + $childrenSlot + $babySlot;
         $remainSlot = $tourSlot - $placedSlot;
-        
+
         return response()->json([
             'remain_slot' => $remainSlot
         ]);

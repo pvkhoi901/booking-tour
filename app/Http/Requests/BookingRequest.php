@@ -33,6 +33,18 @@ class BookingRequest extends FormRequest
 
     public function rules()
     {
+        if (!(request()->start_date)) {
+            return [
+                'start_date' => 'required',
+                'adult_number' => 'required|min:0',
+                'children_number' => 'required|min:0',
+                'baby_number' => 'required|min:0',
+                'booking_person_name' => 'required',
+                'booking_person_phone' => 'required',
+                'booking_person_email' => 'required|email',
+
+            ];
+        }
         $tourSlot = Tour::find(request()->tour_id)->people_limit;
         $sameBooking = Booking::whereDate('start_date', Carbon::createFromFormat('d/m/Y', request()->start_date)->format('Y-m-d'))->where('tour_id', request()->tour_id);
         $adultSlot = $sameBooking->sum('adult_number');
@@ -55,6 +67,21 @@ class BookingRequest extends FormRequest
 
     public function messages()
     {
+        if(!(request()->start_date)){
+            return [
+                'start_date.required' => 'Vui lòng nhập ngày khởi hành',
+                'adult_number.required' => 'Vui lòng nhập số lượng người lớn',
+                'adult_number.min' => 'Số lượng không hợp lệ',
+                'children_number.required' => 'Vui lòng nhập số lượng trẻ em',
+                'children_number.min' => 'Số lượng không hợp lệ',
+                'baby_number.required' => 'Vui lòng nhập số lượng trẻ nhỏ',
+                'baby_number.min' => 'Số lượng không hợp lệ',
+                'booking_person_name.required' => 'Vui lòng nhập tên',
+                'booking_person_phone.required' => 'Vui lòng nhập SĐT',
+                'booking_person_email.required' => 'Vui lòng nhập email',
+                'booking_person_email.email' => 'Email không hợp lệ',
+            ];
+        }
         $tourSlot = Tour::find(request()->tour_id)->people_limit;
         $sameBooking = Booking::whereDate('start_date', Carbon::createFromFormat('d/m/Y', request()->start_date)->format('Y-m-d'))->where('tour_id', request()->tour_id);
         $adultSlot = $sameBooking->sum('adult_number');

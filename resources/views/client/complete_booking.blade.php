@@ -38,19 +38,19 @@
                         <h1>
                             @if ($paymentMethod != null)
                                 Thanh toán thành công bằng {{$paymentMethod }}.
-                            @else 
-                                Hoàn tất đặt tour. Vui lòng liên hệ SĐT 1234567890 để thanh toán tại quầy.
-                            @endif 
+                            @else
+                                Hoàn tất đặt tour. Vui lòng liên hệ SĐT {{env('PHONE_ADMIN') ?? '123456789'}} để thanh toán tại quầy.
+                            @endif
                             <br>
                             <br>
-                            Thông tin đặt tour của bạn sẽ được gửi về mail:<br> {{ $email }}. 
+                            Thông tin đặt tour của bạn sẽ được gửi về mail:<br> {{ $email }}.
                             <br>
                             <br>
                             Xin chân thành cảm ơn.</h1>
                             <a href="/"><button class="btn btn-primary">Trở về trang chủ</button></a>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>

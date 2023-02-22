@@ -50,17 +50,17 @@
                             @error('tour_id')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tên người đặt</label>
                             <input type="text" class="form-control" name="booking_person_name" id="booking_person_name" placeholder="Tên người đặt" value="{{ old('booking_person_name', $booking->booking_person_name) }}">
                             @error('booking_person_name')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -69,7 +69,7 @@
                             @error('booking_person_phone')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -78,7 +78,7 @@
                             @error('booking_person_email')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -87,7 +87,7 @@
                             @error('booking_person_address')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         {{-- <div class="form-group">
@@ -96,7 +96,7 @@
                             @error('start_date')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div> --}}
                         <div class="form-group">
@@ -115,7 +115,7 @@
                             @error('start_date')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -124,7 +124,7 @@
                             @error('adult_number')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -133,7 +133,7 @@
                             @error('children_number')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -142,7 +142,7 @@
                             @error('baby_number')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -156,7 +156,7 @@
                             @error('hotel_id')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <input type="hidden" id="hotel_price">
@@ -175,7 +175,7 @@
                             @error('discount_id')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div> --}}
                         {{-- <div class="form-group">
@@ -188,7 +188,7 @@
                             @error('note')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -202,7 +202,7 @@
                             @error('payment')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -215,7 +215,7 @@
                             @error('payment_status')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -228,7 +228,7 @@
                             @error('status')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                     </div>
@@ -256,7 +256,7 @@ crossorigin="anonymous"></script>
             $('.total-price').val()
             $("#tour-selection").change(function () {
                 var optionSelected = $("option:selected", this);
-                
+
                 var tourData = optionSelected[0].dataset.value != undefined ? JSON.parse(optionSelected[0].dataset.value) : null;
                 calculateTotalPrice(tourData)
                 getDepartureDate()
@@ -285,11 +285,11 @@ crossorigin="anonymous"></script>
                     let adultPrice = data.adult_price
                     let childrenPrice = data.children_price
                     let babyPrice = data.baby_price
-    
+
                     let adultNumber = $('input[name="adult_number"]').val()
                     let childrenNumber = $('input[name="children_number"]').val()
                     let babyNumber = $('input[name="baby_number"]').val()
-    
+
                     let totalPrice = adultNumber * adultPrice + childrenNumber * childrenPrice + babyNumber * babyPrice
                     $('.total-price').val(totalPrice)
                 } else {
@@ -299,7 +299,7 @@ crossorigin="anonymous"></script>
 
             $("#hotel_id").change(function () {
                 // var optionSelected = $("option:selected", this);
-                
+
                 // var hotelData = optionSelected[0].dataset.value != undefined ? JSON.parse(optionSelected[0].dataset.value) : null;
 
                 // let selectedTour = $("#tour-selection :selected")
@@ -325,7 +325,7 @@ crossorigin="anonymous"></script>
             function calculateHotelPrice()
             {
                 var optionSelected = $("#hotel_id :selected");
-                
+
                 var hotelData = optionSelected[0].dataset.value != undefined ? JSON.parse(optionSelected[0].dataset.value) : null;
 
                 let selectedTour = $("#tour-selection :selected")
@@ -338,26 +338,26 @@ crossorigin="anonymous"></script>
                     let adultPrice = tourData.adult_price
                     let childrenPrice = tourData.children_price
                     let babyPrice = tourData.baby_price
-    
+
                     let adultNumber = $('input[name="adult_number"]').val()
                     let childrenNumber = $('input[name="children_number"]').val()
                     let babyNumber = $('input[name="baby_number"]').val()
-    
+
                     let totalPrice = adultNumber * adultPrice + childrenNumber * childrenPrice + babyNumber * babyPrice
-    
+
                     $('.total-price').val(totalPrice + hotelPriceValue)
                 } else {
                     if (tourData != null) {
                         let adultPrice = tourData.adult_price
                         let childrenPrice = tourData.children_price
                         let babyPrice = tourData.baby_price
-        
+
                         let adultNumber = $('input[name="adult_number"]').val()
                         let childrenNumber = $('input[name="children_number"]').val()
                         let babyNumber = $('input[name="baby_number"]').val()
-        
+
                         let totalPrice = adultNumber * adultPrice + childrenNumber * childrenPrice + babyNumber * babyPrice
-        
+
                         $('.total-price').val(totalPrice)
                     } else {
                         $('.total-price').val(0)
@@ -398,7 +398,7 @@ crossorigin="anonymous"></script>
                                         'date': item,
                                         'remain_slot': remainSlot
                                     });
-    
+
                                     let html = ''
                                     htmlDepartureDateArray.forEach(function(item) {
                                         html += `<label>${item.date} - Còn ${item.remain_slot} chỗ</label><br>`
@@ -413,7 +413,7 @@ crossorigin="anonymous"></script>
                     //     html += `<label>${item}</label><br>`
                     // })
                     // $('#validDepartureDateArray').html(html)
-        
+
                     $.datepicker.regional['vi'] = {
                     monthNames: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
                     monthNamesShort: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12'],
@@ -427,16 +427,16 @@ crossorigin="anonymous"></script>
                     showMonthAfterYear: false,
                     yearSuffix: ''
                     };
-        
+
                     $.datepicker.setDefaults($.datepicker.regional['vi']);
                     $('#my_date_picker').datepicker('destroy');
                     $("#my_date_picker").datepicker({
                         dateFormat: 'dd/mm/yy',
-                        beforeShowDay: function(date) {
-                            var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
-        
-                            return [validDepartureDateArray.indexOf(string) != -1]
-                        }
+                        // beforeShowDay: function(date) {
+                        //     var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
+
+                        //     return [validDepartureDateArray.indexOf(string) != -1]
+                        // }
                     })
                 } else {
                     $('#my_date_picker').datepicker('destroy');
@@ -477,7 +477,7 @@ crossorigin="anonymous"></script>
 
             $('#user_id').change(function() {
                 var optionSelected = $("option:selected", this);
-                
+
                 var userData = optionSelected[0].dataset.value != undefined ? JSON.parse(optionSelected[0].dataset.value) : null;
                 if (userData != undefined) {
                     $('#booking_person_name').val(userData.name);
