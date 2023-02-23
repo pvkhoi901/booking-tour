@@ -286,7 +286,7 @@ class HomeController extends Controller
     {
         $request['is_raw'] = 'is_raw';
 
-        $redirectRoute = "http://localhost/complete-booking" . "?" . http_build_query($request->all());
+        $redirectRoute = route("complete_booking") . "?" . http_build_query($request->all());
 
         return redirect($redirectRoute);
     }

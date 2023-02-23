@@ -7,11 +7,11 @@
                     <div class="wrapper_second_about">
                         <h4>Số điện thoại tư vấn</h4>
                         <div class="abotus_content">
-                            <p>Miền Bắc: 098 600 5759</p>
+                            <p>Miền Bắc: 0822 055 781</p>
                             <br>
-                            <p>Miền Trung: 098 600 5758</p>
+                            <p>Miền Trung: 0822 056 782</p>
                             <br>
-                            <p>Miền Nam: 098 600 5757</p>
+                            <p>Miền Nam: 0822 057 783</p>
                         </div>
                         <div class="aboutus_link">
                             <a href="tel:0986005759">Gọi ngay<i class="fa fa-caret-right" aria-hidden="true"></i></a>
@@ -70,13 +70,13 @@
                         <h4>Địa chỉ</h4>
                         <ul>
                             <li><i class="fa fa-map-marker"></i>
-                                <p>Số 1A - Ngõ 21
-                                    <br>Nghĩa Tân - Cầu Giấy - Hà Nội
+                                <p>Số 1 Đại Cồ Việt
+                                    <br>Hai Bà Trưng - Hà Nội
                                 </p>
                             </li>
                             <li><i class="fa fa-phone"></i>
-                                <p>+84 98 745 8452
-                                    <br>+84 97 586 542
+                                <p>+84 82 205 5781
+                                    <br>+84  36 595 6283
                                 </p>
                             </li>
                             <li><i class="fa fa-envelope"></i><a href="#">bookingtour@mail.com</a>
@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                 <div class="copyright_content">
-                    <p>© Copyright 2018-19 by <a href="http://webstrot.com/"> Webstrot </a> - all right reserved</p>
+                    <p>© Copyright 2022-2023 by<a href=""> ManhCuong # VanKhoi </a> - all right reserved</p>
                 </div>
             </div>
         </div>

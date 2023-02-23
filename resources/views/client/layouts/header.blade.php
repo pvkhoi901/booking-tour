@@ -21,7 +21,7 @@
                             <ul>
                                 <li><a href="mailto:caominhduc1999@gmail.com"><i class="fa fa-envelope"></i> bookingtour@gmail.com</a></li>
                                 <li class="contact_number_wrapper hidden-xs"><a href="#"><i class="fa fa-phone"></i>
-                                        +84 98 600 5759</a></li>
+                                        +84 822 055 781</a></li>
                             </ul>
                         </div>
                     </div>

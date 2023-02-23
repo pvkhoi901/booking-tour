@@ -131,7 +131,7 @@
                         
                     </div>
                 </div>
-                <p style="margin-left: 15px; color: red;">Chú ý: Tour đã được xác nhận không thể hủy. Nếu bạn muốn hủy tour đã đặt, vui lòng liên hệ với chúng tôi theo hotline: 0986005759</p>
+                <p style="margin-left: 15px; color: red;">Chú ý: Tour đã được xác nhận không thể hủy. Nếu bạn muốn hủy tour đã đặt, vui lòng liên hệ với chúng tôi theo hotline: 0822055781</p>
             </div>
 
         </div>
