@@ -108,9 +108,6 @@
                                                         <td class="dtr-control sorting_1" tabindex="0">{{ $transition->id }}
                                                         </td>
                                                         <td>{{ $transition->transaction_code }}</td>
-                                                        @php
-                                                            dd($transition);
-                                                        @endphp
                                                         <td>{{ \App\Models\Booking::find($transition->booking_id)->booking_person_name }}</td>
                                                         <td>{{ \App\Models\Booking::find($transition->booking_id)->booking_person_phone }}</td>
                                                         <td>{{ $transition->amount }}</td>
