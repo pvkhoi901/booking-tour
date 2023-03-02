@@ -241,7 +241,7 @@
                                         <!-- /.entry-header -->
 
                                         <div class="entry-content">
-                                            <a class="readmore_btn" href="#"> Đọc thêm</a>
+                                            <a class="readmore_btn" href="{{ route('client.articles.detail', $article->id) }}"> Đọc thêm</a>
                                         </div>
                                         <!-- /.entry-content -->
 

@@ -286,7 +286,7 @@ class HomeController extends Controller
     {
         $request['is_raw'] = 'is_raw';
 
-        $redirectRoute = "http://localhost/complete-booking" . "?" . http_build_query($request->all());
+        $redirectRoute = route("complete_booking") . "?" . http_build_query($request->all());
 
         return redirect($redirectRoute);
     }
@@ -300,7 +300,7 @@ class HomeController extends Controller
         $orderInfo = "Thanh toán qua MoMo";
         $amount = $request->booking_price;
         $orderId = time() ."";
-        $redirectUrl = "http://localhost:8000/complete-booking" . '?' . http_build_query($request->all());
+        $redirectUrl = route('complete_booking') . '?' . http_build_query($request->all());
         $ipnUrl = "https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b";
         $extraData = "";
 

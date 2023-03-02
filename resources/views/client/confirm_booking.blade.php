@@ -43,7 +43,7 @@
                         <h1>Xác nhận thông tin đặt tour của bạn</h1>
                     </div>
                 </div>
-                
+
                 <div class="shop_cart_page_wrapper">
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                         <div class="">
@@ -149,7 +149,7 @@
                         <div class="shipping_Wrapper">
                             <div class="estimate_shiping_Wrapper_cntnt estimate_shiping_Wrapper_repsnse">
                                 <h1 style="margin-top: 10px; color: red; margin-bottom: 10px;">Tổng tiền: {{ number_format($booking->booking_price) }} VNĐ</h1>
-                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping" >
+                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
 
                                     <form action="{{ route('raw_payment') }}" method="post">
                                         @csrf
@@ -164,15 +164,15 @@
                                         <input type="hidden" name="booking_person_name" value="{{ $booking->booking_person_name }}">
                                         <input type="hidden" name="booking_person_phone" value="{{ $booking->booking_person_phone }}">
                                         <input type="hidden" name="booking_person_email" value="{{ $booking->booking_person_email }}">
-                                        <button type="submit" class="btn btn-success">Thanh toán tại quầy</button>
+                                        <button type="submit" class="btn btn-success" style="width: 15rem" >Thanh toán tại quầy</button>
                                     </form>
 
                                 </div>
                                 <br>
-                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
+                                {{-- <div class="shop_btn_wrapper shop_btn_wrapper_shipping"> --}}
                                     {{-- <div id="paypal-button"></div> --}}
                                     {{-- <input type="hidden" id="usd_to_vnd" value="{{ round($booking->booking_price / 23000, 2) }}"> --}}
-                                    <form action="/process-transaction" method="post">
+                                    {{-- <form action="/process-transaction" method="post">
                                         @csrf
                                         <input type="hidden" name="booking_price" value="{{ round($booking->booking_price / 23000, 2) }}">
                                         <input type="hidden" name="tour_id" value="{{ $tour->id }}">
@@ -187,9 +187,9 @@
                                         <input type="hidden" name="booking_person_email" value="{{ $booking->booking_person_email }}">
                                         <button type="submit" class="btn btn-primary">Thanh toán Paypal</button>
                                     </form>
-                                </div>
-                                <br>
-                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
+                                </div> --}}
+                                {{-- <br> --}}
+                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping" >
                                     <form action="{{ route('momo_payment') }}" method="post">
                                         @csrf
                                         <input type="hidden" name="booking_price" value="{{ $booking->booking_price }}">
@@ -203,11 +203,11 @@
                                         <input type="hidden" name="booking_person_name" value="{{ $booking->booking_person_name }}">
                                         <input type="hidden" name="booking_person_phone" value="{{ $booking->booking_person_phone }}">
                                         <input type="hidden" name="booking_person_email" value="{{ $booking->booking_person_email }}">
-                                        <button type="submit" class="btn btn-danger">Thanh toán MoMo</button>
+                                        <button type="submit" class="btn btn-danger" style="width: 15rem" >Thanh toán MoMo</button>
                                     </form>
                                 </div>
                                 <br>
-                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
+                                {{-- <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
                                     <form action="{{ route('vnpay_payment') }}" method="post">
                                         @csrf
                                         <input type="hidden" name="booking_price" value="{{ $booking->booking_price }}">
@@ -223,7 +223,7 @@
                                         <input type="hidden" name="booking_person_email" value="{{ $booking->booking_person_email }}">
                                         <button type="submit" name="redirect" class="btn btn-warning">Thanh toán VnPay</button>
                                     </form>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
 
