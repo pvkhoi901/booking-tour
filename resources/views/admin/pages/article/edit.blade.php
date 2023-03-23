@@ -37,7 +37,7 @@
                             @error('title')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -46,7 +46,7 @@
                             @error('overall')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -58,7 +58,7 @@
                             @error('image')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div> 
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -72,7 +72,7 @@
                             @error('category_id')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                         <div class="form-group">
@@ -84,20 +84,6 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Tour</label>
-                            <select class="form-control" name="tour_id" id="">
-                                <option value=""></option>
-                                    @foreach($tours as $tour)
-                                        <option value="{{ $tour->id }}" @if(old('tour_id') ? old('tour_id') == $tour->id : $article->tour_id == $tour->id ) selected @endif>{{ $tour->name }}</option>
-                                    @endforeach
-                                </select>
-                            @error('tour_id')
-                                <div class="text-danger">
-                                    {{ $message }}
-                                </div>    
-                            @enderror
-                        </div>
-                        <div class="form-group">
                             <label for="exampleInputEmail1">Nội dung</label>
                             <div>
                                 <textarea class="form-control" name="description" id="local-upload" cols="30" rows="10">{!! old('description') ?? $article->description !!}</textarea>
@@ -105,7 +91,7 @@
                             @error('description')
                                 <div class="text-danger">
                                     {{ $message }}
-                                </div>    
+                                </div>
                             @enderror
                         </div>
                     </div>
