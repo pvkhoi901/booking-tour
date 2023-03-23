@@ -81,7 +81,7 @@ Route::get('/cancel-transaction', [PayPalController::class, 'cancelTransaction']
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin_middleware'], function () {
     Route::get('/', [AdminController::class, 'index']);
-    
+
     Route::resource('/categories', CategoryController::class);
     Route::resource('/tags', TagController::class);
     Route::resource('/articles', ArticleController::class);

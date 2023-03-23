@@ -21,7 +21,7 @@
     <div class="login-box">
         <div class="login-logo">
             <a href=""><b>Quên mật khẩu</b></a>
-            
+
         </div>
         <!-- /.login-logo -->
         <div class="card">
@@ -35,7 +35,7 @@
                     @csrf
                     <div class="input-group mb-3">
                         <input type="email" name="email" class="form-control" placeholder="Email">
-                        
+
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -45,12 +45,12 @@
                     @error('email')
                         <div class="text-danger">
                             {{ $message }}
-                        </div>    
+                        </div>
                     @enderror
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-md-4">
-                            <a href="/login">Đăng nhập</a>
+                            <a href="/">Đăng nhập</a>
                         </div>
                         <div class="col-md-8">
                             <button type="submit" class="btn btn-primary btn-block">Gửi link reset mật khẩu</button>

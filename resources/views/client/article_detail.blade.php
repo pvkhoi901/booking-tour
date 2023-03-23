@@ -1,6 +1,6 @@
 @extends('client.layouts.master')
 @section('title')
-    {{ $article->title }} 
+    {{ $article->title }}
 @endsection
 @section('stylesheets')
     <!-- Style Css -->
@@ -16,7 +16,7 @@
     <meta property="og:description"   content="Your description" />
     <meta property="og:image"         content="{{ $article->image ? URL::asset('storage/images/' . $article->image) : '/assets/images/default.jpg' }}" />
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0&appId=162796118975185&autoLogAppEvents=1" nonce="USZ54TNt"></script>
+    {{-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0&appId=162796118975185&autoLogAppEvents=1" nonce="USZ54TNt"></script> --}}
 @endsection
 
 @section('content')

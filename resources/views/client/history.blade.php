@@ -50,7 +50,7 @@
 
                             <thead class="cart_table_heading">
                                 <tr>
-                                    <th>STT</th>
+                                    <th>ID</th>
                                     <th>Tên tour</th>
                                     <th>Ngày đặt</th>
                                     <th>Ngày khởi hành</th>
@@ -119,7 +119,7 @@
                                                     <span></span>
                                             @endswitch
                                         </td>
-                                        
+
                                         <td class="cart_page_totl">{{ number_format($booking->total_price) }} VNĐ</td>
                                         <td>
                                             <a onclick="return confirm('Xác nhận hủy tour ?')" href="{{ route('cancel_booking', $booking->id) }}"><button class="btn btn-danger" @if($booking->status == 2 || $booking->status == 3) disabled @endif>Hủy tour</button></a>
@@ -128,7 +128,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        
+
                     </div>
                 </div>
                 <p style="margin-left: 15px; color: red;">Chú ý: Tour đã được xác nhận không thể hủy. Nếu bạn muốn hủy tour đã đặt, vui lòng liên hệ với chúng tôi theo hotline: 0822055781</p>

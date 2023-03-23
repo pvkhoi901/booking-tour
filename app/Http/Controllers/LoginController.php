@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 use App\Services\UserService;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -107,6 +108,6 @@ class LoginController extends Controller
         ];
         Mail::to($request->email)->send(new ForgotPasswordMail($dataMail));
 
-        return redirect('/forgot-password')->with('notify', 'Vui lòng truy cập link reset mật khẩu trong mail');
+        return Redirect::back()->with('notify', 'Vui lòng truy cập link reset mật khẩu trong mail');
     }
 }

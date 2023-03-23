@@ -1,6 +1,6 @@
 @extends('client.layouts.master')
 @section('title')
-    {{ $tour->name }} 
+    {{ $tour->name }}
 @endsection
 @section('stylesheets')
         <!-- Style Css -->
@@ -11,7 +11,7 @@
         <meta property="og:description"   content="Your description" />
         <meta property="og:image"         content="{{ $tour->image ? URL::asset('storage/images/' . $tour->image) : '/assets/images/default.jpg' }}" />
         <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0&appId=162796118975185&autoLogAppEvents=1" nonce="USZ54TNt"></script>
+        {{-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0&appId=162796118975185&autoLogAppEvents=1" nonce="USZ54TNt"></script> --}}
         <style>
             .badge {
                 font-size: 16px;
@@ -104,7 +104,7 @@
                                 <div class="col-md-4">
                                     <span class="badge badge-primary">Tần suất: {{ $tour->frequency == 1 ? 'Hàng tuần' : 'Liên hệ' }}</span>
                                 </div>
-                               
+
                             </div>
                             <div class="row" style="margin-top: 20px;">
                                 <div class="col-md-4">
@@ -199,7 +199,7 @@
                                                 <span class="author_name">{{ $review->user->name }}<i
                                                         class="fa fa-circle"></i></span>
 
-                                                <span class="publish_date"> {{ \Carbon\Carbon::parse($review->created_at)->format('d/m/Y') }}</span> 
+                                                <span class="publish_date"> {{ \Carbon\Carbon::parse($review->created_at)->format('d/m/Y') }}</span>
                                                 @for($i = 1; $i <= $review->stars; $i++)
                                                     <label for="rating1" class="fa fa-star"></label>
                                                 @endfor
@@ -260,8 +260,8 @@
                 </div>
         </div>
                         <!-- /.blog-content -->
-                        
-        
+
+
     </div>
 </div>
 @endsection
@@ -343,8 +343,8 @@
                                         string = string + `<label for="rating1" class="fa fa-star"></label>`
                                     }
 
-                                string = string + ` 
-                                                
+                                string = string + `
+
                                             </div>
                                             <div class="author_content">
                                                 <p>${data.description}</p>

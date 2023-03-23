@@ -13,7 +13,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Bình luận</h1>
-                   
+
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -32,7 +32,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Danh sách bình luận</h3>
-                         
+
                             <br>
                             <br>
                             <br>
@@ -81,7 +81,7 @@
                                                         rowspan="1" colspan="1" aria-sort="ascending"
                                                         aria-label="Rendering engine: activate to sort column descending"
                                                         style="width: 10%;">
-                                                        STT</th>
+                                                        ID</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example1"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Platform(s): activate to sort column ascending"
@@ -121,8 +121,8 @@
                                                         </td>
                                                         <td>{{ $review->tour->name }}</td>
                                                         <td>{{ $review->user->name }}</td>
-                                                        <td> 
-                                                            @for($i = 1; $i <= $review->stars; $i++) 
+                                                        <td>
+                                                            @for($i = 1; $i <= $review->stars; $i++)
                                                                 ★
                                                             @endfor
                                                         </td>
@@ -193,9 +193,9 @@
                 "bFilter": false,
                 "buttons": [
                     "copy",
-                    "csv", 
-                    "excel", 
-                    "pdf", 
+                    "csv",
+                    "excel",
+                    "pdf",
                     { extend: 'print', text: 'In ấn' },
                     { extend: 'colvis', text: 'Hiển thị cột' }
                 ],

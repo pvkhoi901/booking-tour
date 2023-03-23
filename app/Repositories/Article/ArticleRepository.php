@@ -24,7 +24,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleRepositoryI
             ->when(isset($conditions['title']), function ($q) use ($conditions) {
                 $q->where('title', 'like', '%' . $conditions['title'] . '%');
             })
-            ->orderBy('created_at', 'desc')
+            ->orderBy('id', 'desc')
             ->paginate($perPage);
     }
 

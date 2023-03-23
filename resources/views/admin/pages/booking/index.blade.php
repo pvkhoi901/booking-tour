@@ -13,7 +13,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Đặt tour</h1>
-                   
+
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -117,7 +117,7 @@
                                                         rowspan="1" colspan="1" aria-sort="ascending"
                                                         aria-label="Rendering engine: activate to sort column descending"
                                                         style="width: 10%;">
-                                                        STT</th>
+                                                        ID</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example1"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Platform(s): activate to sort column ascending"
@@ -261,9 +261,9 @@
                 "bFilter": false,
                 "buttons": [
                     "copy",
-                    "csv", 
-                    "excel", 
-                    "pdf", 
+                    "csv",
+                    "excel",
+                    "pdf",
                     { extend: 'print', text: 'In ấn' },
                     { extend: 'colvis', text: 'Hiển thị cột' }
                 ],
