@@ -70,7 +70,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">SĐT người đặt</label>
-                            <input type="text" class="form-control" name="booking_person_phone" id="booking_person_phone" placeholder="SĐT người đặt" value="{{ old('booking_person_phone') }}">
+                            <input type="number" class="form-control" name="booking_person_phone" id="booking_person_phone" placeholder="SĐT người đặt" value="{{ old('booking_person_phone') }}">
                             @error('booking_person_phone')
                                 <div class="text-danger">
                                     {{ $message }}

@@ -222,6 +222,17 @@ class HomeController extends Controller
 
             return view('client.complete_booking', compact('email', 'paymentMethod'));
         }
+        elseif(isset($request->is_raw)) {  // raw
+            $bookingData['payment_status'] = 1;
+            $bookingData['payment'] = 1;
+            $this->bookingService->store($bookingData);
+            $paymentMethod = null;
+            $email = $request->booking_person_email;
+            $email = $request->booking_person_email;
+            Mail::to($email)->send(new BookingInformation($bookingData));
+
+            return view('client.complete_booking', compact('email', 'paymentMethod'));
+        }
         else {
             // return redirect()->back()->with('notify', 'Thanh toán thất bại.');
             $tour = $this->tourService->find($request->tour_id);
@@ -280,6 +291,7 @@ class HomeController extends Controller
         //Just a example, please check more in there
         return redirect()->to($jsonResult['payUrl']);
     }
+
 
     public function execPostRequest($url, $data)
     {
