@@ -45,7 +45,7 @@
                                     <div class="col-3">
                                         <input type="text" name="title" class="form-control" placeholder="Tiêu đề bài viết" value="{{ request()->title }}">
                                     </div>
-                                    <div class="col-3">
+                                    {{-- <div class="col-3">
                                         <select class="form-control" name="tour_id" id="">
                                             <option value=""></option>
                                             @foreach($tours as $tour)
@@ -60,7 +60,7 @@
                                                 <option value="{{ $category->id }}" @if(request()->category == $tour->id) selected @endif>{{ $category->name }}</option>
                                             @endforeach
                                         </select>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-2">
                                         <button class="btn btn-primary">
                                             Tìm kiếm

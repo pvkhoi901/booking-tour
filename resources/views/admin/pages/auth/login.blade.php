@@ -79,9 +79,7 @@
                 <p class="mb-1">
                     <a href="forgot-password">Quên mật khẩu</a>
                 </p>
-                <p class="mb-0">
-                    <a href="register.html" class="text-center">Đăng ký tài khoản</a>
-                </p>
+                
             </div>
             <!-- /.login-card-body -->
         </div>

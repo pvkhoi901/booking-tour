@@ -35,13 +35,13 @@ class DiscountRepository extends RepositoryAbstract implements DiscountRepositor
                 $q->where('discount_rate', '>=', $conditions['discount_rate_from']);
             })
             ->when(isset($conditions['discount_rate_to']), function ($q) use ($conditions) {
-                $q->where('discount_rate', '>=', $conditions['discount_rate_to']);
+                $q->where('discount_rate', '<=', $conditions['discount_rate_to']);
             })
             ->when(isset($conditions['remain_number_from']), function ($q) use ($conditions) {
                 $q->where('remain_number', '>=', $conditions['remain_number_from']);
             })
             ->when(isset($conditions['remain_number_to']), function ($q) use ($conditions) {
-                $q->where('remain_number', '>=', $conditions['remain_number_to']);
+                $q->where('remain_number', '<=', $conditions['remain_number_to']);
             })
             ->orderBy('created_at', 'desc')
             ->paginate($perPage);

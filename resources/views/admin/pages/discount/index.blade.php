@@ -51,7 +51,7 @@
                                         <input type="date" name="start_date_from" class="form-control" placeholder="Ngày bắt đầu min" value="{{ request()->start_date_from }}">
                                     </div>
                                     <div class="col-2">
-                                        <label for="">Ngày bắt đầu min</label>
+                                        <label for="">Ngày bắt đầu max</label>
                                         <input type="date" name="start_date_to" class="form-control" placeholder="Ngày bắt đầu min" value="{{ request()->start_date_to }}">
                                     </div>
                                     <div class="col-2">

@@ -79,7 +79,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="exampleInputEmail1">Tour (TODO)</label>
                             <select class="form-control" name="tour_id" id="">
                                 <option value=""></option>
@@ -92,7 +92,7 @@
                                     {{ $message }}
                                 </div>    
                             @enderror
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nội dung</label>
                             <textarea class="form-control" name="description" id="local-upload" cols="30" rows="10">{!! old('description') !!}</textarea>
